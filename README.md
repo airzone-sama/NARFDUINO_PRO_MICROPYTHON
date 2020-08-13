@@ -1,9 +1,11 @@
 # Narfduino Pro Micropython
 
-Narfduino Pro is similar to the WeAct STM32F411CEU6 based board and contains the flash chip pads on the same pins to enable compatibility between the WeAct STM32F411 and 
+Narfduino Pro is similar to the WeAct STM32F411CEU6 based board and contains the flash chip pads on the same pins to enable compatibility between the WeAct Black Pill STM32F411 and Narfduino Pro (to allow for a non-Narfduino option for my firmware).
 
 Forked from mcauser/WeAct_STM32F411CEU6 
 
+### Narfduino Pro Features
+Lots of stuff
 
 
 ### License
