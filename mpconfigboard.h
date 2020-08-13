@@ -1,14 +1,14 @@
-#define MICROPY_HW_BOARD_NAME       "WeAct F411CE"
+#define MICROPY_HW_BOARD_NAME       "Narfduino Pro"
 #define MICROPY_HW_MCU_NAME         "STM32F411CE"
-#define MICROPY_HW_FLASH_FS_LABEL   "WeActF411CE"
+#define MICROPY_HW_FLASH_FS_LABEL   "NarfduinoPro"
 
 #define MICROPY_PY_THREAD           (1)
 
 // 1 = use internal flash (512 KByte)
 // 0 = use onboard SPI flash (4 MByte) Winbond W25Q32
-#define MICROPY_HW_ENABLE_INTERNAL_FLASH_STORAGE (1)
+#define MICROPY_HW_ENABLE_INTERNAL_FLASH_STORAGE (0)
 
-#define MICROPY_HW_HAS_SWITCH       (1)
+#define MICROPY_HW_HAS_SWITCH       (0)
 #define MICROPY_HW_HAS_FLASH        (1)
 #define MICROPY_HW_ENABLE_RTC       (1)
 #define MICROPY_HW_ENABLE_USB       (1)
@@ -25,8 +25,8 @@
 #define MICROPY_HW_FLASH_LATENCY    FLASH_LATENCY_3
 
 // UART config
-#define MICROPY_HW_UART1_TX     (pin_A9)
-#define MICROPY_HW_UART1_RX     (pin_A10)
+#define MICROPY_HW_UART1_TX     (pin_A15)
+#define MICROPY_HW_UART1_RX     (pin_B3)
 
 #define MICROPY_HW_UART2_TX     (pin_A2)
 #define MICROPY_HW_UART2_RX     (pin_A3)
@@ -71,10 +71,10 @@
 // #define MICROPY_HW_SPI5_MOSI    (pin_B0)
 
 // USRSW is pulled low. Pressing the button makes the input go high.
-#define MICROPY_HW_USRSW_PIN        (pin_A0)
-#define MICROPY_HW_USRSW_PULL       (GPIO_PULLUP)
-#define MICROPY_HW_USRSW_EXTI_MODE  (GPIO_MODE_IT_FALLING)
-#define MICROPY_HW_USRSW_PRESSED    (0)
+//#define MICROPY_HW_USRSW_PIN        (pin_A0)
+//#define MICROPY_HW_USRSW_PULL       (GPIO_PULLUP)
+//#define MICROPY_HW_USRSW_EXTI_MODE  (GPIO_MODE_IT_FALLING)
+//#define MICROPY_HW_USRSW_PRESSED    (0)
 
 // LEDs
 // Red PWD LED is the power LED and always on
@@ -102,8 +102,8 @@
 #define MICROPY_HW_SPIFLASH_MISO    (pin_A6)
 #define MICROPY_HW_SPIFLASH_MOSI    (pin_A7)
 
-#define MICROPY_BOARD_EARLY_INIT    WeAct_F411CE_board_early_init
-void WeAct_F411CE_board_early_init(void);
+#define MICROPY_BOARD_EARLY_INIT    Narfduino_Pro_board_early_init
+void Narfduino_Pro_board_early_init(void);
 
 extern const struct _mp_spiflash_config_t spiflash_config;
 extern struct _spi_bdev_t spi_bdev;
